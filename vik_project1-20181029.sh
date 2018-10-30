@@ -6,7 +6,40 @@ The how-to is at:
     https://create.arduino.cc/projecthub/danionescu/rc-car-hack-with-android-and-arduino-d31a95
 Servo:
     https://learn.sparkfun.com/tutorials/hobby-servo-tutorial
+Voltage dividers:
+    https://learn.sparkfun.com/tutorials/voltage-dividers
+PWM: 
+    https://learn.sparkfun.com/tutorials/pulse-width-modulation
 
+The battery provides 7.2V and 2000mAh (2Ah) and it is Ni-Cd.
+
+The servo requires 4.8V min to 6V max at max 450mA with no-load.
+So we can use one of the ports on the Arduino Motor Shield, but we need some
+resistors to drive down (divide) the voltage:
+    as per the formula: Vout = (Vin) (R2/(R1+R2))
+                           6 = (7.2) (10K/(10K+2K))
+    and the diagram:
+        Vin----R1----|-----R2----Ground
+                     Vout
+                     
+For the HiTec servo, pin1 (black) = Ground
+                     pin2 (red)   = Power (Vout in this case)
+                     pin3 (yellow)= Control signal
+                     
+The Motor requires 7.2V and can draw a lot of Amps, but it seems to do OK with
+    the battery we have (2Ah).
+
+The code in the demo is to contol the RC via Bluethoot instead:
+    the sketch is called btRcCar.ino
+    https://bitbucket.org/danionescu/arduino/src/164319ee4421e6dc633b94b9b2cc1a34fb47b2e8/robots/btRcCar/btRcCar.ino?at=default&fileviewer=file-view-default
+    and there is an Android app to code.
+    
+But my porpuse is to automate not to remote control, so just use the code as a guide.
+
+Next steps:
+    cut wires
+    test
+    
 # General Specs:
 Item: RC Mercedes-Benz Unimog 406 Series U900 (CC-01)
 Scale: 1/10 Electric R/C Car Series No.457
