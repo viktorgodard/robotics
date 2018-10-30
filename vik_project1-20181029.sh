@@ -1,6 +1,12 @@
 # Vik_Project1
 # Convert RC Unimog to Arduino controlled. 
 
+The how-to is at:
+    RC Car Hack With Android And Arduino 
+    https://create.arduino.cc/projecthub/danionescu/rc-car-hack-with-android-and-arduino-d31a95
+Servo:
+    https://learn.sparkfun.com/tutorials/hobby-servo-tutorial
+
 # General Specs:
 Item: RC Mercedes-Benz Unimog 406 Series U900 (CC-01)
 Scale: 1/10 Electric R/C Car Series No.457
