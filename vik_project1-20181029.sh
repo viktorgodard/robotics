@@ -28,7 +28,19 @@ It works with no-load, but once I put it in the floor, the current draw is too h
 for what the Arduino Motor Shield can provide.
 
 Now to the Servo:
-    
+    Reference: https://www.arduino.cc/en/Reference/Servo
+    Note that loading the servo library disables analogWrite() (PWM) functionality
+    on pins 9 and 10, whether or not there is a Servo on those pins.
+    That means that we can not use Channel A of the Motor Shield, only Channel B.
+    To provide power to the servo, I tried to use the Vin pin and create a voltage divider
+    with resistors to lower the voltage from the battery from 7.2V to 6V, but the 
+    voltage was probably still to high.
+    I had to connect the Servo to the 5V pin on the Arduino, then it worked.
+    Also, I am using pin 6 PWM instead of so not to conflict with the Motor Shield.
+    Testing with the servo "Sweep" sketch, I was able to determine the turning radius
+    of the Unimog (as I marked the limits, then disconnected the bearing).
+    The turning radio range is 50 degrees, from 70 to 120 degrees.
+    Again, this is tested with no-load. 
 
 
 The how-to is at:
@@ -47,7 +59,7 @@ The servo requires 4.8V min to 6V max at max 450mA with no-load.
 So we can use one of the ports on the Arduino Motor Shield, but we need some
 resistors to drive down (divide) the voltage:
     as per the formula: Vout = (Vin) (R2/(R1+R2))
-                           6 = (7.2) (10K/(10K+2K))
+                           6 = (7.2) (10K/(2K+10K))
     and the diagram:
         Vin----R1----|-----R2----Ground
                      Vout
