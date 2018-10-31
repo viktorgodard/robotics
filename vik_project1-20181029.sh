@@ -1,6 +1,36 @@
 # Vik_Project1
 # Convert RC Unimog to Arduino controlled. 
 
+The intro to the ARDUINO MOTOR SHIELD REV3:
+    https://www.instructables.com/id/Arduino-Motor-Shield-Tutorial/
+    https://store.arduino.cc/usa/arduino-motor-shield-rev3
+    https://www.arduino.cc/en/uploads/Main/arduino_MotorShield_Rev3-schematic.pdf
+    https://www.st.com/en/motor-drivers/l298.html
+    https://www.st.com/resource/en/datasheet/l298.pdf
+Specs:
+    Operating Voltage:	5V to 12V
+    Motor controller:	L298P, Drives 2 DC motors or 1 stepper motor
+    Max current:    	2A per channel or 4A max (with external power supply)
+    Current sensing:	1.65V/A
+    Other:              Free running stop and brake function
+Pin Mapping:
+    Function	Channel A	Channel B
+    -----------------------------------
+    Direction	Digital 12	Digital 13
+    Speed (PWM)	Digital 3	Digital 11
+    Brake   	Digital 9	Digital 8
+Current Sensing	Analog 0	Analog 1
+
+Start with the main Motor:
+I was able to connect the Unamog Motor to Channel B and ran the code in sketch
+"Motor Shield 1-Channel DC Motor Demo"
+It works with no-load, but once I put it in the floor, the current draw is too high
+for what the Arduino Motor Shield can provide.
+
+Now to the Servo:
+    
+
+
 The how-to is at:
     RC Car Hack With Android And Arduino 
     https://create.arduino.cc/projecthub/danionescu/rc-car-hack-with-android-and-arduino-d31a95
