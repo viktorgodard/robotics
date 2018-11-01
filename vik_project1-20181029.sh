@@ -162,4 +162,34 @@ Gear Material:  3 Metal Gears and 1 Resin Metal Gear
 Wire Length: 11.81" (300mm)
 Wire Gauge:  22AWG
 
-
+# Analog Distance Sensor Specs:
+Distance Sensor: GP2Y0A21 Sharp analog distance sensor
+link: https://www.pololu.com/product/136
+data sheet: https://www.pololu.com/file/0J85/gp2y0a21yk0f.pdf
+Connector Signal:
+    1 - Vo (analog signal, white cable, left pin)
+    2 - GND (Ground, black cable, middle pin)
+    3 - Vcc (Vin, red cable, right pin)
+Operating voltage: 4.5 V to 5.5 V
+Average current consumption: 30 mA
+Distance measuring range: 10 cm to 80 cm (4″ to 32″)
+Output type: analog voltage
+Output voltage differential over distance range: 1.9 V (typical)
+Update period: 38 ± 10 ms
+Size: 44.5 mm × 18.9 mm × 13.5 mm (1.75″ × 0.75″ × 0.53″)
+Weight: 3.5 g (0.12 oz)
+note: this sensor draws current in large, short bursts, and the manufacturer 
+       recommends putting a 10 µF capacitor or larger across power and ground
+       close to the sensor to stabilize the power supply line
+Description:
+GP2Y0A21YK0F is a distance measuring sensor unit,
+composed of an integrated combination of PSD
+(position sensitive detector) , IRED (infrared emitting
+diode) and signal processing circuit.
+The variety of the reflectivity of the object, the
+environmental temperature and the operating duration
+are not influenced easily to the distance detection
+because of adopting the triangulation method.
+This device outputs the voltage corresponding to the
+detection distance. So this sensor can also be used as
+a proximity sensor.
