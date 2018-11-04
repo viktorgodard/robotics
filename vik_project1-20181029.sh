@@ -42,6 +42,11 @@ Now to the Servo:
     The turning radio range is 50 degrees, from 70 to 120 degrees.
     Again, this is tested with no-load. 
 
+Now to the Sharp IR Distance Sensor:
+    Connect
+    1 - Vo (analog signal, white cable, left pin) to A2 pin (A0,A1 taken by Motor Shield)
+    2 - GND (Ground, black cable, middle pin)     to Ground pin
+    3 - Vcc (Vin, red cable, right pin)           to 5V pin
 
 The how-to is at:
     RC Car Hack With Android And Arduino 
@@ -163,26 +168,26 @@ Wire Length: 11.81" (300mm)
 Wire Gauge:  22AWG
 
 # Analog Distance Sensor Specs:
-Distance Sensor: GP2Y0A21 Sharp analog distance sensor
-link: https://www.pololu.com/product/136
+Distance Sensor: Sharp GP2Y0A02YK0F Analog Distance Sensor 20-150cm
+link: https://www.pololu.com/product/1137
 data sheet: https://www.pololu.com/file/0J85/gp2y0a21yk0f.pdf
 Connector Signal:
     1 - Vo (analog signal, white cable, left pin)
     2 - GND (Ground, black cable, middle pin)
     3 - Vcc (Vin, red cable, right pin)
 Operating voltage: 4.5 V to 5.5 V
-Average current consumption: 30 mA
-Distance measuring range: 10 cm to 80 cm (4″ to 32″)
+Average current consumption: 33 mA
+Distance measuring range: 20 cm to 150 cm (8″ to 60″)
 Output type: analog voltage
-Output voltage differential over distance range: 1.9 V (typical)
+Output voltage differential over distance range: 2.05 V (typical)
 Update period: 38 ± 10 ms
-Size: 44.5 mm × 18.9 mm × 13.5 mm (1.75″ × 0.75″ × 0.53″)
-Weight: 3.5 g (0.12 oz)
+Size: 44.5 mm × 18.9 mm × 21.6 mm (1.75″ × 0.75″ × 0.85″)
+Weight: 5 g (0.18 oz)
 note: this sensor draws current in large, short bursts, and the manufacturer 
        recommends putting a 10 µF capacitor or larger across power and ground
        close to the sensor to stabilize the power supply line
 Description:
-GP2Y0A21YK0F is a distance measuring sensor unit,
+GP2Y0A02YK0F is a distance measuring sensor unit,
 composed of an integrated combination of PSD
 (position sensitive detector) , IRED (infrared emitting
 diode) and signal processing circuit.
