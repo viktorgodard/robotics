@@ -1,0 +1,22 @@
+Here are the links for the now defunct company "Next Thing Co" 
+They went out of business on May 2018, they were based in Oakland, CA
+
+They started in Kickstarter and their main offering was an open source board
+running Linux with GPIO for only $9.00
+
+I got 2 of their Pocket CHIP gaming tablets and a CHIP Pro Dev Kit NTC-100480
+with 2 boards around 2016-2017
+
+I believe their demise was the Raspberry Pi Zero W, they just couldn't compete 
+on price and specs.
+
+The main dump of all the repos is at the Internet Archive, at:
+https://archive.org/details/NextThingCo.GitArchive
+
+They also have stuff in GitHub, although from comments online it seems this one
+is missing branches:
+https://github.com/NextThingCo/
+
+More info at Reddit:
+https://www.reddit.com/r/ChipCommunity/comments/86lu8h/what_happened_to_nexthing_wheres_my_order/
+
