@@ -1,0 +1,136 @@
+# Particle.io Spark Core IOT how-to
+# Viktor Godard 20181103
+# resources:
+# https://www.instructables.com/id/Spark-CorePhoton-Setup/
+# https://www.instructables.com/id/Spark-CorePhoton-Cloud-Connection/
+# https://docs.particle.io/tutorials/device-os/led/core/
+### https://docs.particle.io/tutorials/hardware-projects/maker-kit/
+
+0- once you do all the below, return to the Maker Kit to have some fun:
+   https://docs.particle.io/tutorials/hardware-projects/maker-kit/
+
+1- Connect the Spark Core to a usb port on computer
+
+2- start console session
+    picocom /dev/ttyACM0
+
+3- Get Core id: Type "i"
+   Your core id is 50ff71065067545639590687
+   Your core id is 50ff69065067545643420387
+
+4- Connect the Core to a wireless AP (2.4GHz): Type w
+   SSID: Robin
+   Security 0=unsecured, 1=WEP, 2=WPA, 3=WPA2: 3
+   Password: passhere
+5- verify you are connected (message will let you know):
+    If you see a pulsing cyan light, your Spark Core
+      has connected to the Cloud and is ready to go!
+    If your LED flashes red or you encounter any other problems,
+      visit https://www.spark.io/support to debug.
+
+5.5- To erase the stored Wi-Fi networks on your Core:
+     hold the MODE button for about ten seconds, until the RGB LED
+     blinks blue rapidly. Go back to step 2.
+
+6- Go to https://build.particle.io/build/new
+
+7- Go to the devices icon (the target symbol in the lower left)
+
+8- add your new device:
+      add the id: 50ff71065067545639590687
+      set a name: vik-core-01
+      add the id: 50ff69065067545643420387
+      set a name: vik-core-02
+
+9- Run the fist demo code to blin an LED to make sure all is working
+   use the web IDE
+
+10- Install the Particle CLI as per 
+    # https://docs.particle.io/tutorials/developer-tools/cli/
+    bash <( curl -sL https://particle.io/install-cli )
+    # make sure /home/viktor/bin is in your shell path
+ 
+11- Get started by running 
+
+    particle --version
+    Output: 1.35.2
+
+    particle login
+    # you will be asked for login(email) and password.
+    
+    particle list
+    Output: vik-core-01 [50ff71065067545639590687] (Core) is offline
+
+12- now to set up a new device, you can actually do it via the CLI:
+
+    particle serial list
+    Output: Found 1 device connected via serial:
+            /dev/ttyACM0 - Core
+
+    particle identify
+    Output: Your device id is 50ff69065067545643420387
+            Unable to determine system firmware version
+
+    
+    set device in DFU mode before firmware update:
+    https://docs.particle.io/tutorials/device-os/led/core/#dfu-mode-device-firmware-upgrade-
+    To enter DFU Mode:
+      Hold down BOTH buttons
+      Release only the RST button, while holding down the MODE button.
+      Wait for the LED to start flashing yellow
+      Release the MODE button
+
+     Make sure you have UDEV rules in place to access serial without root:
+     sudo cp '/home/viktor/.particle/node_modules/particle-cli/dist/lib/../../assets/50-particle.rules' '/etc/udev/rules.d/'
+
+     Physically unplug and reconnect the Particle device.
+     Then run the particle command again.
+
+     now you can flash it:
+     particle update
+
+     Output: ! There are currently no system firmware updates available for this device.
+
+
+13- Factory Reset:
+    A factory reset restores the firmware on the Core to the default Tinker app
+   and clears all your Wi-Fi credentials.
+   Procedure:
+The procedure is same as the one described above (DFU Mode), but in this case you should continue holding down the MODE button until you see the Core change from blinking yellow to blinking white. Then release the button. The Core should begin after the factory reset is complete.
+- Hold down BOTH buttons
+- Release only the RST button, while holding down the MODE button.
+- Wait for the LED to start blinking yellow (continue to hold the MODE button)
+- The LED will turn solid white (continue to hold the MODE button)
+  Finally, the LED will turn blink white rapidly
+- Release the MODE button
+- You can reset Wi-Fi credentials by performing a Wi-Fi Network Reset.
+
+14- Initial setup via CLI:
+particle setup
+ _ __             _   _      _        
+| '_ \  __ _ _ __| |_(_) ___| | ___ 
+| |_) |/ _` | '__| __| |/ __| |/ _ \
+|  __/| (_| | |  | |_| | (__| |  __/
+|_|    \__,_|_|   \__|_|\___|_|\___|
+                 https://particle.io
+
+> Setup is easy! Let's get started...
+> It appears as though you are already logged in as viktorgodard@gmail.com
+? Would you like to use this account? Yes
+
+! PROTIP: Hold the MODE/SETUP button on your device until it blinks blue!
+! PROTIP: Please make sure you are connected to the internet. 
+
+> I have detected a Core connected via USB.
+? Would you like to continue with this one? Yes
+? Should I scan for nearby Wi-Fi networks? Yes
+? SSID Robin
+? Security Type WPA2
+? Wi-Fi Password dogrules
+Done! Your device should now restart.
+? Press ENTER when your core is breathing CYAN 
+| Claiming the core to your account?
+? Press ENTER when your core is breathing CYAN 
+! Something went wrong
+! Out of tries Device is not connected
+
