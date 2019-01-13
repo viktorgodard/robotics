@@ -1,8 +1,16 @@
 # Arduino
 
-adventures in Arduino, starting on Oct 2018 with the book "Getting Started with Arduino" 2nd edition by Massimo Banzi.
+Viktor Godard's adventures in Arduino
 
-I finished the book on 20181028 and did all the exercises, now on to more:
+starting on Oct 2018 with the book "Getting Started with Arduino"
+2nd edition by Massimo Banzi.
+I finished the book on 20181028 and did all the exercises.
+
+Below are the resources I used to learn how to convert my RC Tamiya Unamog so
+it could have basic autonomous capabilities.
+See the Unamogbot specs and sketch for final product.
+
+Resources:
 
 EXPLORING ARDUINO: A New Book by Jeremy Blum:
 https://youtu.be/dcyy6fHLkhg
