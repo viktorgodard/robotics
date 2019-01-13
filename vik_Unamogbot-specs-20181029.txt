@@ -1,5 +1,9 @@
-# Vik_Project1
-# Convert RC Unimog to Arduino controlled. 
+Name: vik_Unamogbot-specs-20181029.txt
+Date: Viktor Godard 20181029
+Description: modifying my Tamiya RC Unamog to auto-pilot via Arduino.
+             using Arduino Uno R3 and Arduino Motor Shield R3
+             for sketch see: sketch_vik-Unamogbot-20181030.ino
+
 
 The intro to the ARDUINO MOTOR SHIELD REV3:
     https://www.instructables.com/id/Arduino-Motor-Shield-Tutorial/
