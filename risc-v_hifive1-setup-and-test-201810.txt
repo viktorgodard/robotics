@@ -1,0 +1,38 @@
+risc-v freedom-e300-hifive1 board setup and testing
+Viktor Godard, 201810
+ 
+
+This is just a history dump. I followed the instructions on the 
+Freedom-E-SDK-for-HiFive1-readme file at https://github.com/sifive/freedom-e-sdk
+
+the whole process works fine with Ubuntu 18.x  on a 6 years old laptop.
+
+note that the dump may not be complete, refer to the readme to reproduce results.
+
+   32  view README.md 
+   35  lsusb 
+   36  ls /dev/tty*
+   39  sudo screen /dev/ttyUSB0 115200
+   40  sudo screen /dev/ttyUSB1 115200
+   43  sudo su -
+   45  make help
+   46  sudo apt-get install autoconf automake libmpc-dev libmpfr-dev libgmp-dev gawk bison flex texinfo libtool libusb-1.0-0-dev make g++ pkg-config libexpat1-dev zlib1g-dev
+   47  make help
+   48  make -j 3 tools [BOARD=freedom-e300-hifive1]
+   49  ls
+   54  make software PROGRAM=demo_gpio BOARD=freedom-e300-hifive1
+   55  ls
+   56  make upload PROGRAM=demo_gpio BOARD=freedom-e300-hifive1
+   57  view software/demo_gpio/demo_gpio.c 
+   58  make run_debug PROGRAM=demo_gpio BOARD=freedom-e300-hifive1
+   59  make help
+   60  make run_openocd PROGRAM=demo_gpio BOARD=freedom-e300-hifive1
+   61  vim software/demo_gpio/demo_gpio.c 
+   62  vim software/hello/hello.c 
+   63  make software PROGRAM=hello BOARD=freedom-e300-hifive1
+   64  make upload PROGRAM=hello BOARD=freedom-e300-hifive1
+   65  make upload PROGRAM=demo_gpio BOARD=freedom-e300-hifive1
+   66  vim software/hello/hello.c 
+   67  vim software/demo_gpio/demo_gpio.c 
+   68  vim software/led_fade/
+   71  history > history-october-2018-hifive1-setup-and-test.txt

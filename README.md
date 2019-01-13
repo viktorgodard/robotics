@@ -1,14 +1,25 @@
-# Arduino
+# Arduino / IOT
+
+This repository as now a bit more than just Arduino only items.
+I included also Arduino-like IOT devices, like my tests with:
+- Spark Core 
+- Spark Proton
+- Hifive-1 risc-v board
+- pocketCHIP
+- Arduino IDE
+- Processing IDE
+
+So far the tech that I belive has future are Arduino and risc-v  <-- 
 
 Viktor Godard's adventures in Arduino
-
 starting on Oct 2018 with the book "Getting Started with Arduino"
 2nd edition by Massimo Banzi.
 I finished the book on 20181028 and did all the exercises.
 
 Below are the resources I used to learn how to convert my RC Tamiya Unamog so
-it could have basic autonomous capabilities.
-See the Unamogbot specs and sketch for final product.
+it could have very basic autonomous capabilities (2018)
+
+See the Unamogbot specs and sketch for final successfully ran product.
 
 Resources:
 
@@ -57,6 +68,10 @@ the best combo of SPI and Serial Port: synchronous, Master-Slave, 2 wires, full 
 Control Large DC Motors with Arduino! SyRen Motor Driver Tutorial
 https://youtu.be/OW-Bf3yjUyE
 
+# Extra notes: I got the chassis below, but decided not to use it as completing 
+#              such project is expensive and with not enough ROI
+#              Lesson: 1 to 4 lower Amperage motors provide better ROI to learn IOT/Robotics.
+
 Dagu Wild Thumper 6WD All-Terrain Chassis
 https://www.pololu.com/product/1561
 The three motors on each side of the robot are wired in parallel, so only two channels of motor control are required to get this chassis moving. The motors are intended for a maximum nominal operating voltage of 7.2 V (2V minimum), and each has a stall current of 6.6 A and a no-load current of 420 mA at 7.2 V. Since the motors will briefly draw the full stall current when abruptly starting from rest (and nearly twice the stall current when abruptly going from full speed in one direction to full speed in the other), we recommend a motor driver capable of supplying the 20A combined per-channel stall current of these motors at 7.2 V.
@@ -65,8 +80,6 @@ Pololu Dual VNH5019 Motor Driver Shield for Arduino
 https://www.pololu.com/product/2507
 https://github.com/pololu/dual-vnh5019-motor-shield
 
-
 DAGU CONTROLLER FOR WILD THUMPER 6X6 CHASSIS (for ref only, not on sale):
 https://www.robotshop.com/community/forum/t/lmr-review-dagu-wild-thumper-motor-driver/13660
-
 

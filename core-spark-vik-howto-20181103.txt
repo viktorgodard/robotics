@@ -130,7 +130,7 @@ particle setup
 Done! Your device should now restart.
 ? Press ENTER when your core is breathing CYAN 
 | Claiming the core to your account?
-? Press ENTER when your core is breathing CYAN 
-! Something went wrong
-! Out of tries Device is not connected
 
+NOTE: From the 2 Spark Core they sent, one of them was bad.
+      they sent me a Spark Proton as a replacement.
+      it took a while though, so I have not done testing with the Proton device.
