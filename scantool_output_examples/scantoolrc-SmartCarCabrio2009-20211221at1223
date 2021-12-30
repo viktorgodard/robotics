@@ -1,0 +1,10 @@
+version = 2.1
+
+[general]
+system_of_measurements = 1
+display_mode = 1
+log_comms = 0
+
+[comm]
+baud_rate = 4098
+comport_number = 100

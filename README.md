@@ -1,13 +1,24 @@
-# Arduino / IOT
+# Robotics / RPi / Arduino / RISC-V / IOT / Electronics Simulation on Linux
+# Viktor Godard
 
-This repository as now a bit more than just Arduino only items.
+This repository has more than just Arduino only items.
 I included also Arduino-like IOT devices, like my tests with:
-- Spark Core 
-- Spark Proton
+
+- vehicle/car: scantool
+- vehicle/car: piobdii
+
+- Simulide appimage  (very good, easy to use!)
+- Qucs     appimage  (not as good, difficult to use)
+- ngspice  app       (CLI only! the Vim of electronics :)
+- gpsim    app       (CLI & GUI, for basic PIC cpus)
+
 - Hifive-1 risc-v board
-- pocketCHIP
 - Arduino IDE
 - Processing IDE
+
+- pocketCHIP   (discontinued)
+- Spark Core   (discontinued)
+- Spark Proton (discontinued)
 
 So far the tech that I belive has future are Arduino and risc-v  <-- 
 
@@ -68,6 +79,9 @@ the best combo of SPI and Serial Port: synchronous, Master-Slave, 2 wires, full 
 Control Large DC Motors with Arduino! SyRen Motor Driver Tutorial
 https://youtu.be/OW-Bf3yjUyE
 
+
+
+#################
 # Extra notes: I got the chassis below, but decided not to use it as completing 
 #              such project is expensive and with not enough ROI
 #              Lesson: 1 to 4 lower Amperage motors provide better ROI to learn IOT/Robotics.
@@ -82,4 +96,4 @@ https://github.com/pololu/dual-vnh5019-motor-shield
 
 DAGU CONTROLLER FOR WILD THUMPER 6X6 CHASSIS (for ref only, not on sale):
 https://www.robotshop.com/community/forum/t/lmr-review-dagu-wild-thumper-motor-driver/13660
-
+############
