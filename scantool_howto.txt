@@ -26,6 +26,11 @@ make
 #       you should delete all the files *.o and move the binary to your
 #       bin directory.
 
+# IMPORTANT:
+# Make sure you add your user to the dialout group so it has rights to the USB port, otherwise the app will not be able to find the OBDII device:
+sudo usermod -a -G dialout viktor
+newgrp dialout
+groups
 
 # Make a working directory were you will move over the compiled binary:
 mkdir ~/bin

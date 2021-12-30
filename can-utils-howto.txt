@@ -1,0 +1,179 @@
+20211230
+Viktor Godard
+CAN-UTILS
+
+sudo apt install can-utils
+
+This is more advanced than just scantool or piobdii.py
+See this article for some interesting details:
+https://www.hackers-arise.com/post/2017/08/08/automobile-hacking-part-2-the-can-utils-or-socketcan
+
+
+sudo apt info can-utils
+
+Quote:
+Description: SocketCAN userspace utilities and tools
+ CAN is a message-based network protocol designed for vehicles originally
+ created by Robert Bosch GmbH. SocketCAN is a set of open source CAN drivers
+ and a networking stack contributed by Volkswagen Research to the Linux kernel.
+ .
+ This package contains some userspace utilities for Linux SocketCAN subsystem.
+ .
+ Basic tools to display, record, generate and replay CAN traffic:
+ candump, canplayer, cansend, cangen, cansniffer.
+ CAN access via IP sockets: canlogserver, bcmserver, socketcand.
+ CAN in-kernel gateway configuration: cangw.
+ CAN bus measurement and testing: canbusload, can-calc-bit-timing, canfdtest.
+ ISO-TP (ISO 15765-2 2016) tools: isotpsend, isotprecv, isotpsniffer,
+ isotpdump, isotpserver, isotpperf, isotptun.
+ CAN log file converters: asc2log, log2asc, log2long.
+ CAN Serial Line Discipline configuration (for slcan driver):
+ slcan_attach, slcand, slcanpty.
+ SAE J1939 tools and demo: jacd, jspy, jsr, testj1939.
+Unquote.
+
+
+###########################
+
+Also, see: 
+https://thesecuritynoob.com/interviews/an-interview-with-hacker-author-occupy-the-web/
+
+and:
+https://www.hackers-arise.com/automobile-hacking-1
+
+Course Outline:
+I. The Can Protocol
+II. Socket Can
+III. Normal Vehicle Diagnostics and Logging
+IV. Reverse Engineering the CAN Protocol
+V. ECU Hacking
+VI. Attacking ECU's
+VII. Metasploit for Automobile Hacking
+VIII. Attacking Infotainment Centers
+IX. Attacking Wireless in Automobiles
+X. Attacking Key Fobs and Security Systems
+
+
+NOTE: You have to be a Subscriber PRO to take the full class above.
+($1500.00 for 24 courses for 3 years)
+https://www.hackers-arise.com/subscriber-pro
+
+###
+Quote from the Intro Article:
+
+The Basics of the can-utils
+
+The CAN utilities are tools to work with CAN communications within the vehicle from the Linux operating system. These tools can be divided into several functional groups;
+
+1. Basic tools to display, record, generate and play can traffic
+
+2. CAN access via IP sockets
+
+3. CAN in-kernel gateway configuration
+
+4. Can Bus measurement
+
+5. ISO-TP tools
+
+6. Log file converters
+
+7. Serial line discipline (slc) configuration
+
+
+Initially, we will concern ourselves with just the basic tools and the log file converters.
+
+
+For a complete list of the tools in can-utils and their functionality, see the table below.
+
+
+1. Basic tools to display, record, generate and replay CAN traffic 
+
+candump : display, filter and log CAN data to files  
+
+canplayer : replay CAN logfiles  
+
+cansend : send a single frame  
+
+cangen : generate (random) CAN traffic  
+
+cansniffer : display CAN data content differences (just 11bit CAN IDs) 
+
+
+2. CAN access via IP sockets 
+
+canlogserver : log CAN frames from a remote/local host  
+
+bcmserver : interactive BCM configuration (remote/local)  
+
+socketcand : use RAW/BCM/ISO-TP sockets via TCP/IP sockets 
+
+
+3. CAN in-kernel gateway configuration 
+
+cangw : CAN gateway userpace tool for netlink configuration 
+
+
+4. CAN bus measurement and testing 
+
+canbusload : calculate and display the CAN busload  
+
+can-calc-bit-timing : userspace version of in-kernel bitrate calculation  
+
+canfdtest : Full-duplex test program (DUT and host part) 
+
+
+5. ISO-TP tools ISO15765-2:2016 for Linux 
+
+isotpsend : send a single ISO-TP PDU  
+
+isotprecv : receive ISO-TP PDU(s)  
+
+isotpsniffer : 'wiretap' ISO-TP PDU(s)  
+
+isotpdump : 'wiretap' and interpret CAN messages (CAN_RAW)  
+
+isotpserver : IP server for simple TCP/IP <-> ISO 15765-2 bridging (ASCII HEX)
+
+isotpperf : ISO15765-2 protocol performance visualisation  
+
+isotptun : create a bi-directional IP tunnel on CAN via ISO-TP 
+
+
+6. Log file converters 
+
+asc2log : convert ASC logfile to compact CAN frame logfile  
+
+log2asc : convert compact CAN frame logfile to ASC logfile  
+
+log2long : convert compact CAN frame representation into user readable
+
+
+7. Serial Line Discipline configuration (for slcan driver) 
+
+slcan_attach : userspace tool for serial line CAN interface configuration  
+
+slcand : daemon for serial line CAN interface configuration  
+
+slcanpty : creates a pty for applications using the slcan ASCII protocol   
+
+
+Setting Up a Virtual CAN network
+
+In my next article in this series, we will be connecting to the CAN network in your vehicle with various hardware devices. These are relatively inexpensive ($10-20) and I highly recommend you purchase one, if you want to master automobile hacking. If you can't or won't purchase one of these hardware devices, you can always set up a virtual CAN network.
+
+
+To set up a virtual CAN network;
+
+first, load the vcan (virtual CAN) module;
+> modprobe vcan
+
+Then, set up your virtual interface;
+> ip link add dev can0 type vcan
+> ip link set up vcan0
+
+Once we have set up our virtual CAN connection (vcan0), we can test to see whether it is up by using the ifconfig command, like we would with any other interface in Linux.
+
+> ifconfig vcan0
+
+Now, we are ready to begin work with CAN communications. We only need now to connect our Linux operating system to the vehicle. There are numerous devices, means and connection types to do so.
+Unquote.
