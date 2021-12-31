@@ -20,11 +20,10 @@ https://bazaar.launchpad.net/~arcachofo/simulide/trunk/files
 
 The package exist on the Ubuntu repo, but it is an old version (0.1.7 vs 0.4.15): 
 
-    sudo apt search simul
+    apt info simulide
         simulide/focal 0.1.7+dfsg-2build1 amd64
         simple real time electronic circuit simulator
 
-    sudo apt info simulide
 
 Quote: 
 > Homepage: https://sourceforge.net/projects/simulide
@@ -33,11 +32,12 @@ Quote:
 > student experimentation with simple general purpose electronic circuits and
 > PIC, AVR and Arduino microcontroller simulations.
 > PIC and AVR simulation are provided by gpsim and simavr.
-End Quote.
+
+The project home is at: 
+https://www.simulide.com/p/home.html
 
 The latest version is 0.4.15 at: 
-https://www.simulide.com/p/home.html 
-https://www.simulide.com/p/downloads.html 
+https://www.simulide.com/p/downloads.html
 
 
 I opted for the AppImage version, since it will mean that it comes with its own dependencies. 
@@ -56,16 +56,17 @@ https://www.simulide.com/p/basic-use.html
 The Video tutorials from SimulIDE are at: 
 https://www.youtube.com/channel/UCv4QSL5PGN15wk41AVjgRdg/videos
 
-The most important thing to notice is on Source components: 
-- select "Fixed Voltage" source or any other.
+The most important things to notice are:
+- on Source Components, select a "Fixed Voltage" source (e.g.)
 - to close the circuit select Ground.
-- put whatever else you like in the middle.
+- put whatever else you like between the source and ground and start simulating ;)
 
 
 ---
 
-Do you want to find about other applications available? 
-Google: electronic design and simulation on linux
+Do you want to find about other applications available?
+
+then Google: **electronic design and simulation on linux**
 
 e.g.: 
 - https://www.ubuntupit.com/best-electronic-design-automation-tools-eda-tools-for-linux/
@@ -74,70 +75,84 @@ e.g.:
 
 ---
 
-# Application: Qucs
+# Application: Qucs  (Quite_Universal_Circuit_Simulator)
 
-https://en.wikipedia.org/wiki/Quite_Universal_Circuit_Simulator 
-http://qucs.sourceforge.net/install.html#install_ubuntu 
+**Qucs is not as easy or intuitive as SimulIDE**
+
+Qucs will take the color theme from the OS, but in dark mode you can hardly read anything on this app.
+
+Change the OS color theme to light mode, at least in the meantime you try this app.
+
+Video: Qucs Tutorial: Simulating a common emitter bjt amplifier circuit: 
+https://www.youtube.com/watch?v=AyK7N_aSQx4
+
+At Wikipedia: https://en.wikipedia.org/wiki/Quite_Universal_Circuit_Simulator
+
+Project install instructions at: http://qucs.sourceforge.net/install.html#install_ubuntu 
+
+The regular version is not part of the Ubuntu regular repos, so we need to add its repo before installing:
 
     sudo apt-add-repository ppa:qucs/qucs
     sudo apt-get update
     sudo apt-get install qucs
 
-NOTE: Qucs will take the color theme from the OS, but in dark mode you can hardly read anything on this app. 
-Change the OS color theme to light mode, at least in the meantime you try this app.
 
-NOTE: Qucs is not as easy or intuitive as SimulIDE. 
+### Application: Qucs-S  (Qucs with SPICE)
 
-See video: 
-Qucs Tutorial: Simulating a common emitter bjt amplifier circuit 
-https://www.youtube.com/watch?v=AyK7N_aSQx4
+This is the same Qucs application, but with SPICE integration and packaged with AppImage! (so, much better).
 
-
-# Application: Qucs-S  (Qucs with SPICE)
-
-Same application, but packaged in AppImage and with SPICE integration (so, better). 
 Repo at: https://ra3xdh.github.io/
 
 Download the latest AppImage at: 
 https://github.com/ra3xdh/qucs_s/releases/download/0.0.22/Qucs-S-0.0.22_x86_64.AppImage
+
+    mv ~/Downloads/Qucs-S-0.0.22_x86_64.AppImage ~/bin/.
+    chmod 750 ~/bin/Qucs-S-0.0.22_x86_64.AppImage
+    cd ~/bin
+    ./Qucs-S-0.0.22_x86_64.AppImage
 
 
 ---
 
 # Application: NGSPICE
 
-https://en.wikipedia.org/wiki/Ngspice 
 NOTE: this app is 100% CLI :)
 
-NGSPICE latest version is 35, the one available on the Ubuntu 20.04 repo is 31. 
+at Wikipedia: https://en.wikipedia.org/wiki/Ngspice 
+
+NGSPICE latest version is 35, the one available on the Ubuntu 20.04 repo is 31.
+
 version 31 is from 2019, so it is good enough to try.
 
     sudo apt install ngspice
+    cd ~
+    ngspice
 
 Tutorials at: http://ngspice.sourceforge.net/tutorials.html
 
-This is a great introduction video! 
-noc20 ee12 Getting started with NgSpice 
+This is a great introduction video!
+
+noc20 ee12 Getting started with NgSpice:  
 https://www.youtube.com/watch?v=m621rS1pdwA
 
 
 ---
 
-## Other interesting applications:
-
 # Application: GPSim
 
-https://en.wikipedia.org/wiki/Gpsim 
-http://gpsim.sourceforge.net/gpsim.html
+at Wikipedia: https://en.wikipedia.org/wiki/Gpsim
 
-Video: Using GPSIM on a Raspberry Pi To Debug PIC Assembly Language 
+Project home: http://gpsim.sourceforge.net/gpsim.html
+
+Video: Using GPSIM on a Raspberry Pi To Debug PIC Assembly Language:  
 https://www.youtube.com/watch?v=KUlD0ynIc8g
 
-    sudo apt search gpsim
+Note that 0.31 is the latest version (from 2019):
+
+    apt info gpsim
         gpsim/focal 0.31.0-2build1 amd64
         Simulator for Microchip's PIC microcontrollers
 
-NOTE: 0.31 is the latest version from 2019
 
 Install Pre-reqs: 
 
