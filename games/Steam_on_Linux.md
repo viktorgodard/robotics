@@ -1,16 +1,25 @@
-# 20211224
-# Viktor Godard
+# Steam gaming on Linux
 
-# Steam is available in the Ubuntu Repo:
-sudo apt search steam
-# it is an older version, but it auto-updates once installed.
-steam/unknown 1:1.0.0.74 i386
-  Launcher for the Steam software distribution service
+20211224
+Viktor Godard
 
-# You can also install it from:
+Steam is available in the Ubuntu Repo: 
+
+    sudo apt search steam
+
+it is an older version, but it auto-updates once installed.
+
+    sudo apt info steam
+        steam/unknown 1:1.0.0.74 i386
+        Launcher for the Steam software distribution service
+
+---
+
+You can also download the install package from: 
 https://store.steampowered.com/about/
-# then click on install Steam to download the .deb installer.
 
+Click on "Install Steam" to download the ".deb" installer.
 
+It will also update to the latest after you have logged in.
 
-
+---
