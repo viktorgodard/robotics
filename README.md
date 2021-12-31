@@ -1,11 +1,12 @@
 # Robotics / RPi / Arduino / RISC-V / IOT / Electronics Simulation on Linux
-# Viktor Godard
+## Viktor Godard
 
 This repository has more than just Arduino only items.
 I included also Arduino-like IOT devices, like my tests with:
 
-- vehicle/car: scantool
-- vehicle/car: piobdii
+- vehicle/car: scantool    (very good, easy to use!)
+- vehicle/car: piobdii     (todo, looks good)
+- vehicle/car: can-utils   (todo, advanced)
 
 - Simulide appimage  (very good, easy to use!)
 - Qucs     appimage  (not as good, difficult to use)
@@ -16,9 +17,9 @@ I included also Arduino-like IOT devices, like my tests with:
 - Arduino IDE
 - Processing IDE
 
-- pocketCHIP   (discontinued)
-- Spark Core   (discontinued)
-- Spark Proton (discontinued)
+- pocketCHIP   (fun but discontinued)
+- Spark Core   (fun but discontinued)
+- Spark Proton (fun but discontinued)
 
 So far the tech that I belive has future are Arduino and risc-v  <-- 
 
@@ -32,8 +33,8 @@ it could have very basic autonomous capabilities (2018)
 
 See the Unamogbot specs and sketch for final successfully ran product.
 
-Resources:
 
+### Resources:
 EXPLORING ARDUINO: A New Book by Jeremy Blum:
 https://youtu.be/dcyy6fHLkhg
 
@@ -81,19 +82,22 @@ https://youtu.be/OW-Bf3yjUyE
 
 
 
-#################
-# Extra notes: I got the chassis below, but decided not to use it as completing 
-#              such project is expensive and with not enough ROI
-#              Lesson: 1 to 4 lower Amperage motors provide better ROI to learn IOT/Robotics.
+### Extra notes:
+I got the chassis below, but decided not to use it as completing such project is expensive and with not enough ROI
+
+Lesson learn: 
+- 1 to 4 motors maximum (this one had 6 wheels).
+- lower Amperage motors are better to learn IOT/Robotics.
 
 Dagu Wild Thumper 6WD All-Terrain Chassis
 https://www.pololu.com/product/1561
-The three motors on each side of the robot are wired in parallel, so only two channels of motor control are required to get this chassis moving. The motors are intended for a maximum nominal operating voltage of 7.2 V (2V minimum), and each has a stall current of 6.6 A and a no-load current of 420 mA at 7.2 V. Since the motors will briefly draw the full stall current when abruptly starting from rest (and nearly twice the stall current when abruptly going from full speed in one direction to full speed in the other), we recommend a motor driver capable of supplying the 20A combined per-channel stall current of these motors at 7.2 V.
+The three motors on each side of the robot are wired in parallel, so only two channels of motor control are required to get this chassis moving.
+The motors are intended for a maximum nominal operating voltage of 7.2 V (2V minimum), and each has a stall current of 6.6 A and a no-load current of 420 mA at 7.2 V.
+Since the motors will briefly draw the full stall current when abruptly starting from rest (and nearly twice the stall current when abruptly going from full speed in one direction to full speed in the other), we recommend a motor driver capable of supplying the 20A combined per-channel stall current of these motors at 7.2 V.
 
 Pololu Dual VNH5019 Motor Driver Shield for Arduino
-https://www.pololu.com/product/2507
-https://github.com/pololu/dual-vnh5019-motor-shield
+- https://www.pololu.com/product/2507
+- https://github.com/pololu/dual-vnh5019-motor-shield
 
 DAGU CONTROLLER FOR WILD THUMPER 6X6 CHASSIS (for ref only, not on sale):
-https://www.robotshop.com/community/forum/t/lmr-review-dagu-wild-thumper-motor-driver/13660
-############
+- https://www.robotshop.com/community/forum/t/lmr-review-dagu-wild-thumper-motor-driver/13660
