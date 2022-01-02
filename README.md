@@ -1,4 +1,7 @@
-# Basics on Linux based OBD, Electronics simulation, RISC-V, Arduino, IoT, RPi, etc.
+# Basics on Linux based On-Board Diagnostics and Electronics simulation
+
+## plus IoT, SiFive RISC-V, Arduino, Raspberry Pi
+
 
 2018-2021 Viktor Godard
 
@@ -6,7 +9,7 @@
 
 ## List of projects in this repo:
 
-- On-Board Diagnostics (OBD) on Linux, howto
+###- On-Board Diagnostics (OBD) on Linux, howto
 
     - scantool       (very good, easy to use)
     - PiOBDII.py     (good, easy to use)
@@ -14,7 +17,7 @@
     - can-utils      (todo)
 
 
-- Electronics simulation on Linux, howto
+###- Electronics simulation on Linux, howto
 
     - Simulide appimage  (very good, easy to use)
     - Qucs     appimage  (not as good, difficult to use)
@@ -22,14 +25,14 @@
     - gpsim    app       (todo)
 
 
-- RISC-V
+###- RISC-V
 
     - Freedom-E SDK for HiFive1 board
     - risc-v_hifive1-howto-20181007.bash
     - setup and test history dump
 
 
-- Arduino
+###- Arduino
 
     - Getting started labs
     - Processing IDE
@@ -38,7 +41,7 @@
     - Unamogbot specs notes (yep, I misspelled it, it should be Unimogbot).
 
 
-- Old projects
+###- Old projects
 
     - pocketCHIP   (fun but discontinued)
     - Spark Core   (fun but discontinued)
