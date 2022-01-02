@@ -4,7 +4,14 @@ Viktor Godard
 
 List from https://www.evilution.co.uk/mod/obdii-error-codes.htm
 
+If you have a Smart Car, consider supporting Evilution, they have the most complete howtos for fixing everything on a Smart Car!
+https://www.evilution.co.uk/join
+
+---
+
 Below is a list of generic trouble codes that can be read by a fault code reader or an X-Gauge. Each car manufacturer has specific codes for their vehicles including the smart. As yet, no smart specific codes have been added to this list.
+
+---
 
 Powertrain Generic Trouble Codes
 DTC Codes – P0100-P0199 – Fuel and Air Metering
@@ -2746,3 +2753,5 @@ C0760 – Tire Pressure Monitor (TPM) system sensor not transmitting
 C0765 – Tire Pressure Monitor (TPM) system sensor not transmitting
 C0800 – Device Power #1 Circuit Malfunction
 C0896 – Electronic Suspension Control (ESC) voltage is outside the normal range of 9 to 15.5 volts
+
+---
