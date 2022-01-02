@@ -1,7 +1,29 @@
-# README #
+RISC-V Freedom-E SDK for HiFive1
 
-Viktor Godard 201810: I keep this readme as reference of my first successful
-                      install and to compare with future versions of the readme.
+201810 Viktor Godard
+
+I completed this project successfully in October 2018.
+
+Board: Sifive Freedom e300 HiFive1
+       https://www.sifive.com/boards/hifive1
+
+SDK:   Sifive Freedom-E
+       https://www.sifive.com/software
+
+Vendor: SiFive
+        https://en.wikipedia.org/wiki/SiFive
+
+Sifive for Developers: documentation, forums, etc. at
+
+
+###
+Update:
+Please note, as of 2020,  the original HiFive1 board has been discontinued, there is a newer board (rev B).
+Also note that the development environment has improved, now an Eclipse based IDE is provided.
+   Manual 2021: https://static.dev.sifive.com/dev-tools/FreedomStudio/2021.04/freedom-studio-manual-2021-04.pdf
+   Freedom Studio — v2021.04.1 Linux download: https://www.sifive.com/software
+###
+
 
 This repository, maintained by SiFive, Inc, makes it easy to get started developing software for the Freedom E RISC-V platform. 
 
@@ -139,8 +161,3 @@ to download and run the benchmark on the HiFive1 board:
 - Divide the reported Iterations/Sec by the reported core frequency in MHz to
   obtain a CoreMarks/MHz value.
 
-### For More Information ###
-
-Documentation, Forums, and much more available at
-
-[dev.sifive.com](https://dev.sifive.com)

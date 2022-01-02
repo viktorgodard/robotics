@@ -7,6 +7,8 @@ Viktor Godard
 ## On-Board Diagnostics or OBD is associated with a vehicle self-diagnostics and reporting capability.
 
 
+---
+
 TODO: **SparkFun** has an excellent tutorial and the hardware needed to get started with OBD-II, see:
 https://learn.sparkfun.com/tutorials/getting-started-with-obd-ii
 
@@ -22,6 +24,8 @@ TODO: **Tinkernut** has an excellent tutorial on how to create an OBD dashboard 
 TODO: **Scantool** has a good lab tutorial for their devices, see:
 - https://www.scantool.net/scantool/downloads/194/18060_IVN_lab_manual.pdf
 - https://www.scantool.net/scantool/downloads/195/18060_IVN_Slides.pdf
+
+---
 
 
 ### OBD Use Cases
@@ -63,12 +67,13 @@ TODO: **Scantool** has a good lab tutorial for their devices, see:
 
 
 ### legislated OBD-II protocols
-SAE J1850 PWM (Ford)
-SAE J1850 VPW (GM)
-ISO 9141-2    (Asian, European, Chrysler)
-ISO 14230-4   (Keyword Protocol 2000)
-ISO 15765-4   (HS CAN 250/500 kbps, 11/29 bit)
-SAE J1939     (HD CAN)
+
+- SAE J1850 PWM (Ford)
+- SAE J1850 VPW (GM)
+- ISO 9141-2    (Asian, European, Chrysler)
+- ISO 14230-4   (Keyword Protocol 2000)
+- ISO 15765-4   (HS CAN 250/500 kbps, 11/29 bit)
+- SAE J1939     (HD CAN)
 
 
 ### Standards
@@ -120,9 +125,9 @@ https://www.iso.org/obp/ui/#iso:std:iso:14230:-4:ed-1:v1:en
     - **BCM** : Body
     - Etc.: ABS/ESC, SRS, HVAC, immobilizer, ...
 
+---
 
-
-### Software
+## OBD Software
 
 There is a nice list at: https://www.elmelectronics.com/help/obd/software/#Linux , the ones I have tried so far are:
 
@@ -140,8 +145,9 @@ The other ones I want to try are:
   Go library for communicating with cars OBD-II system using ELM327 based USB-devices.
   
 
+---
 
-### Hardware
+## OBD Hardware
 
 **WARNING**: With most available interfaces, do not use a computer powered from wall socket,
  because your car may not be adequately grounded.
@@ -174,6 +180,7 @@ Their most popular chip is the ELM327. There is also a low power version ELM327L
   https://www.amazon.com/gp/product/B0711LGRGQ/ref=ppx_yo_dt_b_asin_title_o09_s00?ie=UTF8&psc=1
 
 
+---
 
 ### Testing connection to device ELM327
 
@@ -221,6 +228,7 @@ https://www.elmelectronics.com/wp-content/uploads/2017/01/ELM327DS.pdf
 
 https://en.wikipedia.org/wiki/OBD-II_PIDshttps://en.wikipedia.org/wiki/OBD-II_PIDs
 
+---
 
 ### Additional Resources
 
@@ -257,6 +265,7 @@ https://www.scantool.net/j1939-bus-obd-simulator/
 
 https://www.ozenelektronik.com/downs/pdf/oe91c1700.pdf
 
+---
 
 ### Sources
 
@@ -265,3 +274,14 @@ https://www.ozenelektronik.com/downs/pdf/oe91c1700.pdf
     - OBD-II PIDs  https://en.wikipedia.org/wiki/OBD-II_PIDs
     - ELM327  https://en.wikipedia.org/wiki/ELM327
 
+---
+
+<!---
+Comments:
+
+ Markdown rendering of this doc tested with mdless and also with pandoc as follows:
+    pandoc thisdoc.md | lynx -stdin
+
+ Markdown syntax style used from:
+    https://www.markdownguide.org/basic-syntax/
+-->

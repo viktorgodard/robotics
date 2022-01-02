@@ -176,3 +176,14 @@ That is all for now.
 # Conclusion: focus on SimulIDE and NGSPICE.
 
 ---
+
+<!---
+Comments:
+
+ Markdown rendering of this doc tested with mdless and also with pandoc as follows:
+    pandoc thisdoc.md | lynx -stdin
+
+ Markdown syntax style used from:
+    https://www.markdownguide.org/basic-syntax/
+-->
+
