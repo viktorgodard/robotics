@@ -1,4 +1,4 @@
-# Basics on Linux based On-Board Diagnostics and Electronics simulation
+# Basics of Linux based On-Board Diagnostics and Electronics simulation
 
 ## plus IoT, SiFive RISC-V, Arduino, Raspberry Pi
 
