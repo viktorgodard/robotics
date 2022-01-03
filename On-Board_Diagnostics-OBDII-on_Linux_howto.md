@@ -132,13 +132,13 @@ https://www.iso.org/obp/ui/#iso:std:iso:14230:-4:ed-1:v1:en
 There is a nice list at: https://www.elmelectronics.com/help/obd/software/#Linux , the ones I have tried so far are:
 
 - screen
-- Scantool   github.com:kees/scantool.git
-- PiOBD-II   github.com:BirchJD/PiOBDII.git
+- Scantool   https://github.com/kees/scantool
+- PiOBD-II   https://github.com/BirchJD/PiOBDII
 
 
 The other ones I want to try are:
 
-- FreeDiag        https://github.com/fenugrec/freediag/  (todo)
+- FreeDiag        https://github.com/fenugrec/freediag/
 - CAN-Utils       https://github.com/linux-can/can-utils/blob/master/can-j1939-kickstart.md
 - OBD GPS Logger  http://icculus.org/obdgpslogger/
 - ELMODB          https://github.com/rzetterberg/elmobd
@@ -146,6 +146,7 @@ The other ones I want to try are:
   
 
 ---
+
 
 ## OBD Hardware
 
@@ -157,30 +158,24 @@ Note that most of the available end-user devices are based on the ELM Electronic
 Their most popular chip is the ELM327. There is also a low power version ELM327L, and a bluetooth version ELM329.
 
 
-- Xtrcuk ELM327 OBD2 Scanner USB Android Adapter for Windows Code Read Check Engin Light Diagnostic Scan Tool (Black)
-  upports all OBD2 protocols (J1850PWM,HS CAN, MS CAN, HS CAN2, HS CAN3)
-
-  https://www.amazon.com/gp/product/B08ZJDNF1C/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1
+- [Xtrcuk ELM327 OBD2 Scanner USB](https://amzn.to/31i3gjV)
+  ELM327 based, supports all OBD2 protocols (J1850PWM,HS CAN, MS CAN, HS CAN2, HS CAN3)
 
 
-- OBDLink EX FORScan OBD Adapter
+- [OBDLink EX FORScan OBD Adapter](https://amzn.to/3pNdtyd)
   ELM327 based, switch seamlessly between HS-CAN, MS-CAN, and J1850 Ford networks
 
-  https://www.amazon.com/gp/product/B081VQVD3F/ref=ppx_yo_dt_b_asin_title_o06_s00?ie=UTF8&psc=1
 
-
-- OBDLink MX+ OBD2 Bluetooth Scanner
+- [OBDLink MX+ OBD2 Bluetooth Scanner](https://amzn.to/3FNwWVi)
   Enhanced OEM support for Ford, GM, Mazda, Nissan/Infinity, Toyota/Lexus/Scion, Honda, Hyundai, Kia
 
-  https://www.amazon.com/gp/product/B07JFRFJG6/ref=ppx_yo_dt_b_asin_title_o00_s00?ie=UTF8&psc=1
 
-
-- bbfly-A9 OBD II OBD2 16 Pin Splitter Extension 1x Male and 2X Female Extension Cable Adapter (2FT/60CM)
+- [bbfly-A9 OBD II OBD2 16 Pin Splitter Extension 1x Male and 2X Female Extension Cable Adapter 2FT/60CM](https://amzn.to/34kIHVr)
   This is very helpful to better position the OBD device and to avoid damaging the main OBD port over time. 
-  https://www.amazon.com/gp/product/B0711LGRGQ/ref=ppx_yo_dt_b_asin_title_o09_s00?ie=UTF8&psc=1
 
 
 ---
+
 
 ### Testing connection to device ELM327
 
